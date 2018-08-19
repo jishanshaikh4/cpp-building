@@ -6,6 +6,14 @@ compiler:
   - clang
 dist: trusty
 
+# Adding environment variables
+env: COMPILER_NAME=clang CXX=clang++-3.8 CC=clang-3.8
+addons:
+  apt:
+    packages:
+      - clang-3.8
+    sources: *sources
+
 # C++14
 before_install:
   - sudo add-apt repository -y ppa:ubuntu-toolchain-r/test
@@ -14,6 +22,9 @@ before_install:
 install:
   - sudo apt-get install -qq g++-6
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++ -6 90
+  - sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.8 90
+  - sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.8 90
+  - sudo apt-get install -y libc++-dev libc++abi-dev
  
 script:
   - qmake
