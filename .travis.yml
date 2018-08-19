@@ -1,12 +1,10 @@
 # Learnt from https://github.com/richelbilderbeek/travis_cpp_tutorial/blob/master/travis_cpp_tutorial.pdf
 
 language: cpp
-compiler:
-  - gcc
-  - clang
 dist: trusty
+sudo: required
+compiler: clang
 
-# Adding environment variables
 env: COMPILER_NAME=clang CXX=clang++-3.8 CC=clang-3.8
 addons:
   apt:
@@ -14,18 +12,14 @@ addons:
       - clang-3.8
     sources: *sources
 
-# C++14
-before_install:
-  - sudo apt-get update
-  
-install:
-  - sudo apt-get install -qq g++-6
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++ -6 90
+# clang compiler installation
+install: 
   - sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.8 90
   - sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.8 90
   - sudo apt-get install -y libc++-dev libc++abi-dev
- 
+
+# Actual building the project
 script:
   - qmake
   - make
-  - ./travis-qmake-gcc-clang-cpp14
+  - ./travis_qmake_clang_cpp14
