@@ -22,4 +22,4 @@ install:
 script:
   - qmake
   - make
-  - ./travis_qmake_clang_c++14
+  - ./travis-qmake-clang-c++14
