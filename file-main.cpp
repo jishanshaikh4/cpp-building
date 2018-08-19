@@ -3,6 +3,6 @@
 #include <iostream>
 
 int main() {
-  std::cout << "You are working in file-main.cpp" << endl;
+  std::cout << "You are working in file-main.cpp" << std::endl;
   return 0;
 }
