@@ -1,7 +1,8 @@
 // Simple C++14 file showing some stuff
-// Note that min(*nos) is declared in stl::algorithm included by bits/stdc++.h
+// Note that min(*nos) is declared in stl::algorithm included by algorithm.h
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
