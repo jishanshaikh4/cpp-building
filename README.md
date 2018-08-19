@@ -1,4 +1,4 @@
-## Testing C++14 (Module-0)
+## Building/Testing C++14 (Module-0)
 [![Build Status](https://travis-ci.org/Jishanshaikh4/Project-testing-cpp.svg?branch=master)](https://travis-ci.org/Jishanshaikh4/Project-testing-cpp)
 
 A simple example building (from scratch, really!) a simple file-main.cpp file using travis-ci and qmake.
