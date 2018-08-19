@@ -1,0 +1,921 @@
+travis_fold:start:step_start_instance
+[0K[33;1mStarting instance[0m
+âœ“ selected image "travis-ci-garnet-trusty-1512502259-986baf0"
+âœ“ rendered startup script
+âœ“ inserted instance
+â€¢ sleeping 5s before checking instance insert
+â€¢ polling for instance insert completion...
+âœ“ instance is ready (8.85s)
+travis_fold:end:step_start_instance
+[0Ktravis_fold:start:step_upload_script
+[0K[33;1mUploading script[0m
+â€¢ waiting for ssh connectivity.......
+âœ“ ssh connectivity established (24.306s)
+âœ“ uploaded script
+travis_fold:end:step_upload_script
+[0Ktravis_fold:start:worker_info
+[0K[33;1mWorker information[0m
+hostname: 5429d8e0-eed5-4f88-916e-495a699d5429@1.production-1-worker-org-b-4-gce
+version: v4.0.0 https://github.com/travis-ci/worker/tree/e5cb567e10c0eefe380e81c9a2229ac8fb6a16ce
+instance: travis-job-b28ee0a9-cdc8-4df1-bc61-871d99f7c5de travis-ci-garnet-trusty-1512502259-986baf0 (via amqp)
+startup: 8.850375436s
+travis_fold:end:worker_info
+[0Ktravis_fold:start:system_info
+[0K[33;1mBuild system information[0m
+Build language: cpp
+Build group: stable
+Build dist: trusty
+Build id: 417829878
+Job id: 417829879
+Runtime kernel version: 4.4.0-101-generic
+travis-build version: ff4bc709c
+[34m[1mBuild image provisioning date and time[0m
+Tue Dec  5 19:58:13 UTC 2017
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 14.04.5 LTS
+Release:	14.04
+Codename:	trusty
+[34m[1mCookbooks Version[0m
+7c2c6a6 https://github.com/travis-ci/travis-cookbooks/tree/7c2c6a6
+[34m[1mgit version[0m
+git version 2.15.1
+[34m[1mbash version[0m
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+[34m[1mgcc version[0m
+gcc (Ubuntu 4.8.4-2ubuntu1~14.04.3) 4.8.4
+Copyright (C) 2013 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[34m[1mdocker version[0m
+Client:
+ Version:      17.09.0-ce
+ API version:  1.32
+ Go version:   go1.8.3
+ Git commit:   afdb6d4
+ Built:        Tue Sep 26 22:42:38 2017
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      17.09.0-ce
+ API version:  1.32 (minimum version 1.12)
+ Go version:   go1.8.3
+ Git commit:   afdb6d4
+ Built:        Tue Sep 26 22:41:20 2017
+ OS/Arch:      linux/amd64
+ Experimental: false
+[34m[1mclang version[0m
+clang version 5.0.0 (tags/RELEASE_500/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/clang-5.0.0/bin
+[34m[1mjq version[0m
+jq-1.5
+[34m[1mbats version[0m
+Bats 0.4.0
+[34m[1mshellcheck version[0m
+0.4.6
+[34m[1mshfmt version[0m
+v2.0.0
+[34m[1mccache version[0m
+ccache version 3.1.9
+
+Copyright (C) 2002-2007 Andrew Tridgell
+Copyright (C) 2009-2011 Joel Rosdahl
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 3 of the License, or (at your option) any later
+version.
+[34m[1mcmake version[0m
+cmake version 3.9.2
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+[34m[1mheroku version[0m
+heroku-cli/6.14.39-addc925 (linux-x64) node-v9.2.0
+[34m[1mimagemagick version[0m
+Version: ImageMagick 6.7.7-10 2017-07-31 Q16 http://www.imagemagick.org
+[34m[1mmd5deep version[0m
+4.2
+[34m[1mmercurial version[0m
+Mercurial Distributed SCM (version 4.2.2)
+(see https://mercurial-scm.org for more information)
+
+Copyright (C) 2005-2017 Matt Mackall and others
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[34m[1mmysql version[0m
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+[34m[1mopenssl version[0m
+OpenSSL 1.0.1f 6 Jan 2014
+[34m[1mpacker version[0m
+Packer v1.0.2
+
+Your version of Packer is out of date! The latest version
+is 1.1.2. You can update by downloading from www.packer.io
+[34m[1mpostgresql client version[0m
+psql (PostgreSQL) 9.6.6
+[34m[1mragel version[0m
+Ragel State Machine Compiler version 6.8 Feb 2013
+Copyright (c) 2001-2009 by Adrian Thurston
+[34m[1msubversion version[0m
+svn, version 1.8.8 (r1568071)
+   compiled Aug 10 2017, 17:20:39 on x86_64-pc-linux-gnu
+
+Copyright (C) 2013 The Apache Software Foundation.
+This software consists of contributions made by many people;
+see the NOTICE file for more information.
+Subversion is open source software, see http://subversion.apache.org/
+
+The following repository access (RA) modules are available:
+
+* ra_svn : Module for accessing a repository using the svn network protocol.
+  - with Cyrus SASL authentication
+  - handles 'svn' scheme
+* ra_local : Module for accessing a repository on local disk.
+  - handles 'file' scheme
+* ra_serf : Module for accessing a repository via WebDAV protocol using serf.
+  - using serf 1.3.3
+  - handles 'http' scheme
+  - handles 'https' scheme
+
+[34m[1msudo version[0m
+Sudo version 1.8.9p5
+Configure options: --prefix=/usr -v --with-all-insults --with-pam --with-fqdn --with-logging=syslog --with-logfac=authpriv --with-env-editor --with-editor=/usr/bin/editor --with-timeout=15 --with-password-timeout=0 --with-passprompt=[sudo] password for %p:  --without-lecture --with-tty-tickets --disable-root-mailer --enable-admin-flag --with-sendmail=/usr/sbin/sendmail --with-timedir=/var/lib/sudo --mandir=/usr/share/man --libexecdir=/usr/lib/sudo --with-sssd --with-sssd-lib=/usr/lib/x86_64-linux-gnu --with-selinux
+Sudoers policy plugin version 1.8.9p5
+Sudoers file grammar version 43
+
+Sudoers path: /etc/sudoers
+Authentication methods: 'pam'
+Syslog facility if syslog is being used for logging: authpriv
+Syslog priority to use when user authenticates successfully: notice
+Syslog priority to use when user authenticates unsuccessfully: alert
+Send mail if the user is not in sudoers
+Use a separate timestamp for each user/tty combo
+Lecture user the first time they run sudo
+Root may run sudo
+Allow some information gathering to give useful error messages
+Require fully-qualified hostnames in the sudoers file
+Visudo will honor the EDITOR environment variable
+Set the LOGNAME and USER environment variables
+Length at which to wrap log file lines (0 for no wrap): 80
+Authentication timestamp timeout: 15.0 minutes
+Password prompt timeout: 0.0 minutes
+Number of tries to enter a password: 3
+Umask to use or 0777 to use user's: 022
+Path to mail program: /usr/sbin/sendmail
+Flags for mail program: -t
+Address to send mail to: root
+Subject line for mail messages: *** SECURITY information for %h ***
+Incorrect password message: Sorry, try again.
+Path to authentication timestamp dir: /var/lib/sudo
+Default password prompt: [sudo] password for %p: 
+Default user to run commands as: root
+Value to override user's $PATH with: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+Path to the editor for use by visudo: /usr/bin/editor
+When to require a password for 'list' pseudocommand: any
+When to require a password for 'verify' pseudocommand: all
+File descriptors >= 3 will be closed before executing a command
+Environment variables to check for sanity:
+	TZ
+	TERM
+	LINGUAS
+	LC_*
+	LANGUAGE
+	LANG
+	COLORTERM
+Environment variables to remove:
+	RUBYOPT
+	RUBYLIB
+	PYTHONUSERBASE
+	PYTHONINSPECT
+	PYTHONPATH
+	PYTHONHOME
+	TMPPREFIX
+	ZDOTDIR
+	READNULLCMD
+	NULLCMD
+	FPATH
+	PERL5DB
+	PERL5OPT
+	PERL5LIB
+	PERLLIB
+	PERLIO_DEBUG 
+	JAVA_TOOL_OPTIONS
+	SHELLOPTS
+	GLOBIGNORE
+	PS4
+	BASH_ENV
+	ENV
+	TERMCAP
+	TERMPATH
+	TERMINFO_DIRS
+	TERMINFO
+	_RLD*
+	LD_*
+	PATH_LOCALE
+	NLSPATH
+	HOSTALIASES
+	RES_OPTIONS
+	LOCALDOMAIN
+	CDPATH
+	IFS
+Environment variables to preserve:
+	JAVA_HOME
+	TRAVIS
+	CI
+	DEBIAN_FRONTEND
+	XAUTHORIZATION
+	XAUTHORITY
+	PS2
+	PS1
+	PATH
+	LS_COLORS
+	KRB5CCNAME
+	HOSTNAME
+	HOME
+	DISPLAY
+	COLORS
+Locale to use while parsing sudoers: C
+Directory in which to store input/output logs: /var/log/sudo-io
+File in which to store the input/output log: %{seq}
+Add an entry to the utmp/utmpx file when allocating a pty
+PAM service name to use
+PAM service name to use for login shells
+Create a new PAM session for the command to run in
+Maximum I/O log sequence number: 0
+
+Local IP address and netmask pairs:
+	10.240.0.28/255.255.255.255
+	172.17.0.1/255.255.0.0
+
+Sudoers I/O plugin version 1.8.9p5
+[34m[1mgzip version[0m
+gzip 1.6
+Copyright (C) 2007, 2010, 2011 Free Software Foundation, Inc.
+Copyright (C) 1993 Jean-loup Gailly.
+This is free software.  You may redistribute copies of it under the terms of
+the GNU General Public License <http://www.gnu.org/licenses/gpl.html>.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Jean-loup Gailly.
+[34m[1mzip version[0m
+Copyright (c) 1990-2008 Info-ZIP - Type 'zip "-L"' for software license.
+This is Zip 3.0 (July 5th 2008), by Info-ZIP.
+Currently maintained by E. Gordon.  Please send bug reports to
+the authors using the web page at www.info-zip.org; see README for details.
+
+Latest sources and executables are at ftp://ftp.info-zip.org/pub/infozip,
+as of above date; see http://www.info-zip.org/ for other sites.
+
+Compiled with gcc 4.8.2 for Unix (Linux ELF) on Oct 21 2013.
+
+Zip special compilation options:
+	USE_EF_UT_TIME       (store Universal Time)
+	BZIP2_SUPPORT        (bzip2 library version 1.0.6, 6-Sept-2010)
+	    bzip2 code and library copyright (c) Julian R Seward
+	    (See the bzip2 license for terms of use)
+	SYMLINK_SUPPORT      (symbolic links supported)
+	LARGE_FILE_SUPPORT   (can read and write large files on file system)
+	ZIP64_SUPPORT        (use Zip64 to store large files in archives)
+	UNICODE_SUPPORT      (store and read UTF-8 Unicode paths)
+	STORE_UNIX_UIDs_GIDs (store UID/GID sizes/values using new extra field)
+	UIDGID_NOT_16BIT     (old Unix 16-bit UID/GID extra field not used)
+	[encryption, version 2.91 of 05 Jan 2007] (modified for Zip 3)
+
+Encryption notice:
+	The encryption code of this program is not copyrighted and is
+	put in the public domain.  It was originally written in Europe
+	and, to the best of our knowledge, can be freely distributed
+	in both source and object forms from any country, including
+	the USA under License Exception TSU of the U.S. Export
+	Administration Regulations (section 740.13(e)) of 6 June 2002.
+
+Zip environment options:
+             ZIP:  [none]
+          ZIPOPT:  [none]
+[34m[1mvim version[0m
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Nov 24 2016 16:43:18)
+Included patches: 1-52
+Extra patches: 8.0.0056
+Modified by pkg-vim-maintainers@lists.alioth.debian.org
+Compiled by buildd@
+Huge version without GUI.  Features included (+) or not (-):
++acl             +farsi           +mouse_netterm   +syntax
++arabic          +file_in_path    +mouse_sgr       +tag_binary
++autocmd         +find_in_path    -mouse_sysmouse  +tag_old_static
+-balloon_eval    +float           +mouse_urxvt     -tag_any_white
+-browse          +folding         +mouse_xterm     -tcl
+++builtin_terms  -footer          +multi_byte      +terminfo
++byte_offset     +fork()          +multi_lang      +termresponse
++cindent         +gettext         -mzscheme        +textobjects
+-clientserver    -hangul_input    +netbeans_intg   +title
+-clipboard       +iconv           +path_extra      -toolbar
++cmdline_compl   +insert_expand   -perl            +user_commands
++cmdline_hist    +jumplist        +persistent_undo +vertsplit
++cmdline_info    +keymap          +postscript      +virtualedit
++comments        +langmap         +printer         +visual
++conceal         +libcall         +profile         +visualextra
++cryptv          +linebreak       +python          +viminfo
++cscope          +lispindent      -python3         +vreplace
++cursorbind      +listcmds        +quickfix        +wildignore
++cursorshape     +localmap        +reltime         +wildmenu
++dialog_con      -lua             +rightleft       +windows
++diff            +menu            -ruby            +writebackup
++digraphs        +mksession       +scrollbind      -X11
+-dnd             +modify_fname    +signs           -xfontset
+-ebcdic          +mouse           +smartindent     -xim
++emacs_tags      -mouseshape      -sniff           -xsmp
++eval            +mouse_dec       +startuptime     -xterm_clipboard
++ex_extra        +mouse_gpm       +statusline      -xterm_save
++extra_search    -mouse_jsbterm   -sun_workshop    -xpm
+   system vimrc file: "$VIM/vimrc"
+     user vimrc file: "$HOME/.vimrc"
+ 2nd user vimrc file: "~/.vim/vimrc"
+      user exrc file: "$HOME/.exrc"
+  fall-back for $VIM: "/usr/share/vim"
+Compilation: gcc -c -I. -Iproto -DHAVE_CONFIG_H     -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1      
+Linking: gcc   -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,--as-needed -o vim        -lm -ltinfo -lnsl  -lselinux  -lacl -lattr -lgpm -ldl    -L/usr/lib/python2.7/config-x86_64-linux-gnu -lpython2.7 -lpthread -ldl -lutil -lm -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions      
+[34m[1miptables version[0m
+iptables v1.4.21
+[34m[1mcurl version[0m
+curl 7.35.0 (x86_64-pc-linux-gnu) libcurl/7.35.0 OpenSSL/1.0.1f zlib/1.2.8 libidn/1.28 librtmp/2.3
+[34m[1mwget version[0m
+GNU Wget 1.15 built on linux-gnu.
+[34m[1mrsync version[0m
+rsync  version 3.1.0  protocol version 31
+[34m[1mgimme version[0m
+v1.2.0
+[34m[1mnvm version[0m
+0.33.6
+[34m[1mperlbrew version[0m
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.80
+[34m[1mphpenv version[0m
+rbenv 1.1.1-25-g6aa70b6
+[34m[1mrvm version[0m
+rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+[34m[1mdefault ruby version[0m
+ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mElasticSearch version[0m
+5.5.0
+[34m[1mInstalled Firefox version[0m
+firefox 56.0.2
+[34m[1mMongoDB version[0m
+MongoDB 3.4.10
+[34m[1mPhantomJS version[0m
+2.1.1
+[34m[1mPre-installed PostgreSQL versions[0m
+9.2.24
+9.3.20
+9.4.15
+9.5.10
+9.6.6
+[34m[1mRabbitMQ Version[0m
+3.6.14
+[34m[1mRedis version[0m
+redis-server 4.0.6
+[34m[1mriak version[0m
+2.2.3
+[34m[1mPre-installed Go versions[0m
+1.7.4
+[34m[1mant version[0m
+Apache Ant(TM) version 1.9.3 compiled on April 8 2014
+[34m[1mmvn version[0m
+Apache Maven 3.5.2 (138edd61fd100ec658bfa2d307c43b76940a5d7d; 2017-10-18T07:58:13Z)
+Maven home: /usr/local/maven-3.5.2
+Java version: 1.8.0_151, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-8-oracle/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "4.4.0-98-generic", arch: "amd64", family: "unix"
+[34m[1mgradle version[0m
+
+------------------------------------------------------------
+Gradle 4.0.1
+------------------------------------------------------------
+
+Build time:   2017-07-07 14:02:41 UTC
+Revision:     38e5dc0f772daecca1d2681885d3d85414eb6826
+
+Groovy:       2.4.11
+Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+JVM:          1.8.0_151 (Oracle Corporation 25.151-b12)
+OS:           Linux 4.4.0-98-generic amd64
+
+[34m[1mlein version[0m
+Leiningen 2.8.1 on Java 1.8.0_151 Java HotSpot(TM) 64-Bit Server VM
+[34m[1mPre-installed Node.js versions[0m
+v4.8.6
+v6.12.0
+v6.12.1
+v8.9
+v8.9.1
+[34m[1mphpenv versions[0m
+  system
+  5.6
+* 5.6.32 (set by /home/travis/.phpenv/version)
+  7.0
+  7.0.25
+  7.1
+  7.1.11
+  hhvm
+  hhvm-stable
+[34m[1mcomposer --version[0m
+Composer version 1.5.2 2017-09-11 16:59:25
+[34m[1mPre-installed Ruby versions[0m
+ruby-2.2.7
+ruby-2.3.4
+ruby-2.4.1
+travis_fold:end:system_info
+[0K
+[32;1mNetwork availability confirmed.[0m
+
+travis_fold:start:apt
+[0K[33;1mInstalling APT Packages (BETA)[0m
+$ export DEBIAN_FRONTEND=noninteractive
+travis_time:start:08519700
+[0K$ sudo -E apt-get -yq update &>> ~/apt-get-update.log
+
+travis_time:end:08519700:start=1534667175786220635,finish=1534667178852695397,duration=3066474762
+[0Ktravis_time:start:044f84c8
+[0K$ sudo -E apt-get -yq --no-install-suggests --no-install-recommends $TRAVIS_APT_OPTS install clang-3.8
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  cpp-4.8 g++-4.8 gcc-4.8 gcc-4.8-base libasan0 libatomic1
+  libclang-common-3.8-dev libclang1-3.8 libgcc-4.8-dev libgomp1 libitm1
+  libllvm3.8v4 libobjc-4.8-dev libobjc4 libquadmath0 libstdc++-4.8-dev
+  libstdc++6 libtsan0
+Suggested packages:
+  gnustep gnustep-devel clang-3.8-doc gcc-4.8-locales g++-4.8-multilib
+  gcc-4.8-doc libstdc++6-4.8-dbg gcc-4.8-multilib libgcc1-dbg libgomp1-dbg
+  libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg libquadmath0-dbg
+  libstdc++-4.8-doc
+Recommended packages:
+  llvm-3.8-dev
+The following NEW packages will be installed:
+  clang-3.8 libclang-common-3.8-dev libclang1-3.8 libllvm3.8v4 libobjc-4.8-dev
+  libobjc4
+The following packages will be upgraded:
+  cpp-4.8 g++-4.8 gcc-4.8 gcc-4.8-base libasan0 libatomic1 libgcc-4.8-dev
+  libgomp1 libitm1 libquadmath0 libstdc++-4.8-dev libstdc++6 libtsan0
+13 upgraded, 6 newly installed, 0 to remove and 222 not upgraded.
+Need to get 67.8 MB of archives.
+After this operation, 157 MB of additional disk space will be used.
+Get:1 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libatomic1 amd64 4.8.4-2ubuntu1~14.04.4 [8,630 B]
+Get:2 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libitm1 amd64 4.8.4-2ubuntu1~14.04.4 [28.6 kB]
+Get:3 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libgomp1 amd64 4.8.4-2ubuntu1~14.04.4 [23.1 kB]
+Get:4 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libasan0 amd64 4.8.4-2ubuntu1~14.04.4 [63.1 kB]
+Get:5 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libtsan0 amd64 4.8.4-2ubuntu1~14.04.4 [94.8 kB]
+Get:6 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libquadmath0 amd64 4.8.4-2ubuntu1~14.04.4 [126 kB]
+Get:7 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 g++-4.8 amd64 4.8.4-2ubuntu1~14.04.4 [18.0 MB]
+Get:8 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 gcc-4.8 amd64 4.8.4-2ubuntu1~14.04.4 [5,040 kB]
+Get:9 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 cpp-4.8 amd64 4.8.4-2ubuntu1~14.04.4 [4,452 kB]
+Get:10 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libstdc++-4.8-dev amd64 4.8.4-2ubuntu1~14.04.4 [1,051 kB]
+Get:11 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libgcc-4.8-dev amd64 4.8.4-2ubuntu1~14.04.4 [1,688 kB]
+Get:12 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 gcc-4.8-base amd64 4.8.4-2ubuntu1~14.04.4 [16.7 kB]
+Get:13 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libstdc++6 amd64 4.8.4-2ubuntu1~14.04.4 [260 kB]
+Get:14 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libllvm3.8v4 amd64 1:3.8-2ubuntu3~trusty5 [9,724 kB]
+Get:15 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libobjc4 amd64 4.8.4-2ubuntu1~14.04.4 [110 kB]
+Get:16 http://mirror.jmu.edu/pub/ubuntu trusty-updates/main amd64 libobjc-4.8-dev amd64 4.8.4-2ubuntu1~14.04.4 [378 kB]
+Get:17 http://mirror.jmu.edu/pub/ubuntu trusty-updates/universe amd64 libclang1-3.8 amd64 1:3.8-2ubuntu3~trusty5 [4,054 kB]
+Get:18 http://mirror.jmu.edu/pub/ubuntu trusty-updates/universe amd64 libclang-common-3.8-dev amd64 1:3.8-2ubuntu3~trusty5 [1,153 kB]
+Get:19 http://mirror.jmu.edu/pub/ubuntu trusty-updates/universe amd64 clang-3.8 amd64 1:3.8-2ubuntu3~trusty5 [21.5 MB]
+Fetched 67.8 MB in 6s (10.9 MB/s)
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 93696 files and directories currently installed.)
+Preparing to unpack .../libatomic1_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libatomic1:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../libitm1_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libitm1:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../libgomp1_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libgomp1:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../libasan0_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libasan0:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../libtsan0_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libtsan0:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../libquadmath0_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../g++-4.8_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking g++-4.8 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../gcc-4.8_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking gcc-4.8 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../cpp-4.8_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking cpp-4.8 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../libstdc++-4.8-dev_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../libgcc-4.8-dev_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Preparing to unpack .../gcc-4.8-base_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking gcc-4.8-base:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Processing triggers for ccache (3.1.9-1) ...
+Updating symlinks in /usr/lib/ccache ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up gcc-4.8-base:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 93696 files and directories currently installed.)
+Preparing to unpack .../libstdc++6_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libstdc++6:amd64 (4.8.4-2ubuntu1~14.04.4) over (4.8.4-2ubuntu1~14.04.3) ...
+Setting up libstdc++6:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.13) ...
+Selecting previously unselected package libllvm3.8v4:amd64.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 93696 files and directories currently installed.)
+Preparing to unpack .../libllvm3.8v4_1%3a3.8-2ubuntu3~trusty5_amd64.deb ...
+Unpacking libllvm3.8v4:amd64 (1:3.8-2ubuntu3~trusty5) ...
+Selecting previously unselected package libobjc4:amd64.
+Preparing to unpack .../libobjc4_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libobjc4:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Selecting previously unselected package libobjc-4.8-dev:amd64.
+Preparing to unpack .../libobjc-4.8-dev_4.8.4-2ubuntu1~14.04.4_amd64.deb ...
+Unpacking libobjc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Selecting previously unselected package libclang1-3.8:amd64.
+Preparing to unpack .../libclang1-3.8_1%3a3.8-2ubuntu3~trusty5_amd64.deb ...
+Unpacking libclang1-3.8:amd64 (1:3.8-2ubuntu3~trusty5) ...
+Selecting previously unselected package libclang-common-3.8-dev.
+Preparing to unpack .../libclang-common-3.8-dev_1%3a3.8-2ubuntu3~trusty5_amd64.deb ...
+Unpacking libclang-common-3.8-dev (1:3.8-2ubuntu3~trusty5) ...
+Selecting previously unselected package clang-3.8.
+Preparing to unpack .../clang-3.8_1%3a3.8-2ubuntu3~trusty5_amd64.deb ...
+Unpacking clang-3.8 (1:3.8-2ubuntu3~trusty5) ...
+Processing triggers for ccache (3.1.9-1) ...
+Updating symlinks in /usr/lib/ccache ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libatomic1:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libitm1:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libgomp1:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libasan0:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libtsan0:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up cpp-4.8 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up gcc-4.8 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up g++-4.8 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libllvm3.8v4:amd64 (1:3.8-2ubuntu3~trusty5) ...
+Setting up libobjc4:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libobjc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.4) ...
+Setting up libclang1-3.8:amd64 (1:3.8-2ubuntu3~trusty5) ...
+Setting up libclang-common-3.8-dev (1:3.8-2ubuntu3~trusty5) ...
+Setting up clang-3.8 (1:3.8-2ubuntu3~trusty5) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.13) ...
+W: --force-yes is deprecated, use one of the options starting with --allow instead.
+
+travis_time:end:044f84c8:start=1534667178861500320,finish=1534667196675949799,duration=17814449479
+[0Ktravis_fold:end:apt
+[0K
+travis_fold:start:git.checkout
+[0Ktravis_time:start:24122643
+[0K$ git clone --depth=50 --branch=master https://github.com/Jishanshaikh4/Project-testing-cpp.git Jishanshaikh4/Project-testing-cpp
+Cloning into 'Jishanshaikh4/Project-testing-cpp'...
+remote: Counting objects: 56, done.[K
+remote: Compressing objects:   1% (1/56)   [K
+remote: Compressing objects:   3% (2/56)   [K
+remote: Compressing objects:   5% (3/56)   [K
+remote: Compressing objects:   7% (4/56)   [K
+remote: Compressing objects:   8% (5/56)   [K
+remote: Compressing objects:  10% (6/56)   [K
+remote: Compressing objects:  12% (7/56)   [K
+remote: Compressing objects:  14% (8/56)   [K
+remote: Compressing objects:  16% (9/56)   [K
+remote: Compressing objects:  17% (10/56)   [K
+remote: Compressing objects:  19% (11/56)   [K
+remote: Compressing objects:  21% (12/56)   [K
+remote: Compressing objects:  23% (13/56)   [K
+remote: Compressing objects:  25% (14/56)   [K
+remote: Compressing objects:  26% (15/56)   [K
+remote: Compressing objects:  28% (16/56)   [K
+remote: Compressing objects:  30% (17/56)   [K
+remote: Compressing objects:  32% (18/56)   [K
+remote: Compressing objects:  33% (19/56)   [K
+remote: Compressing objects:  35% (20/56)   [K
+remote: Compressing objects:  37% (21/56)   [K
+remote: Compressing objects:  39% (22/56)   [K
+remote: Compressing objects:  41% (23/56)   [K
+remote: Compressing objects:  42% (24/56)   [K
+remote: Compressing objects:  44% (25/56)   [K
+remote: Compressing objects:  46% (26/56)   [K
+remote: Compressing objects:  48% (27/56)   [K
+remote: Compressing objects:  50% (28/56)   [K
+remote: Compressing objects:  51% (29/56)   [K
+remote: Compressing objects:  53% (30/56)   [K
+remote: Compressing objects:  55% (31/56)   [K
+remote: Compressing objects:  57% (32/56)   [K
+remote: Compressing objects:  58% (33/56)   [K
+remote: Compressing objects:  60% (34/56)   [K
+remote: Compressing objects:  62% (35/56)   [K
+remote: Compressing objects:  64% (36/56)   [K
+remote: Compressing objects:  66% (37/56)   [K
+remote: Compressing objects:  67% (38/56)   [K
+remote: Compressing objects:  69% (39/56)   [K
+remote: Compressing objects:  71% (40/56)   [K
+remote: Compressing objects:  73% (41/56)   [K
+remote: Compressing objects:  75% (42/56)   [K
+remote: Compressing objects:  76% (43/56)   [K
+remote: Compressing objects:  78% (44/56)   [K
+remote: Compressing objects:  80% (45/56)   [K
+remote: Compressing objects:  82% (46/56)   [K
+remote: Compressing objects:  83% (47/56)   [K
+remote: Compressing objects:  85% (48/56)   [K
+remote: Compressing objects:  87% (49/56)   [K
+remote: Compressing objects:  89% (50/56)   [K
+remote: Compressing objects:  91% (51/56)   [K
+remote: Compressing objects:  92% (52/56)   [K
+remote: Compressing objects:  94% (53/56)   [K
+remote: Compressing objects:  96% (54/56)   [K
+remote: Compressing objects:  98% (55/56)   [K
+remote: Compressing objects: 100% (56/56)   [K
+remote: Compressing objects: 100% (56/56), done.[K
+remote: Total 56 (delta 24), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:   1% (1/56)   
+Unpacking objects:   3% (2/56)   
+Unpacking objects:   5% (3/56)   
+Unpacking objects:   7% (4/56)   
+Unpacking objects:   8% (5/56)   
+Unpacking objects:  10% (6/56)   
+Unpacking objects:  12% (7/56)   
+Unpacking objects:  14% (8/56)   
+Unpacking objects:  16% (9/56)   
+Unpacking objects:  17% (10/56)   
+Unpacking objects:  19% (11/56)   
+Unpacking objects:  21% (12/56)   
+Unpacking objects:  23% (13/56)   
+Unpacking objects:  25% (14/56)   
+Unpacking objects:  26% (15/56)   
+Unpacking objects:  28% (16/56)   
+Unpacking objects:  30% (17/56)   
+Unpacking objects:  32% (18/56)   
+Unpacking objects:  33% (19/56)   
+Unpacking objects:  35% (20/56)   
+Unpacking objects:  37% (21/56)   
+Unpacking objects:  39% (22/56)   
+Unpacking objects:  41% (23/56)   
+Unpacking objects:  42% (24/56)   
+Unpacking objects:  44% (25/56)   
+Unpacking objects:  46% (26/56)   
+Unpacking objects:  48% (27/56)   
+Unpacking objects:  50% (28/56)   
+Unpacking objects:  51% (29/56)   
+Unpacking objects:  53% (30/56)   
+Unpacking objects:  55% (31/56)   
+Unpacking objects:  57% (32/56)   
+Unpacking objects:  58% (33/56)   
+Unpacking objects:  60% (34/56)   
+Unpacking objects:  62% (35/56)   
+Unpacking objects:  64% (36/56)   
+Unpacking objects:  66% (37/56)   
+Unpacking objects:  67% (38/56)   
+Unpacking objects:  69% (39/56)   
+Unpacking objects:  71% (40/56)   
+Unpacking objects:  73% (41/56)   
+Unpacking objects:  75% (42/56)   
+Unpacking objects:  76% (43/56)   
+Unpacking objects:  78% (44/56)   
+Unpacking objects:  80% (45/56)   
+Unpacking objects:  82% (46/56)   
+Unpacking objects:  83% (47/56)   
+Unpacking objects:  85% (48/56)   
+Unpacking objects:  87% (49/56)   
+Unpacking objects:  89% (50/56)   
+Unpacking objects:  91% (51/56)   
+Unpacking objects:  92% (52/56)   
+Unpacking objects:  94% (53/56)   
+Unpacking objects:  96% (54/56)   
+Unpacking objects:  98% (55/56)   
+Unpacking objects: 100% (56/56)   
+Unpacking objects: 100% (56/56), done.
+
+travis_time:end:24122643:start=1534667196680850653,finish=1534667197293785505,duration=612934852
+[0K$ cd Jishanshaikh4/Project-testing-cpp
+$ git checkout -qf 440760fc979aa40eebc67678c0a347f6272ade98
+travis_fold:end:git.checkout
+[0K
+[33;1mSetting environment variables from .travis.yml[0m
+$ export COMPILER_NAME=clang
+$ export CXX=clang++-3.8
+$ export CC=clang-3.8
+
+$ export CXX=clang++
+$ export CC=clang
+$ clang --version
+clang version 5.0.0 (tags/RELEASE_500/final)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /usr/local/clang-5.0.0/bin
+travis_fold:start:install.1
+[0Ktravis_time:start:0e7a6720
+[0K$ sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-3.8 90
+update-alternatives: using /usr/bin/clang++-3.8 to provide /usr/bin/clang++ (clang++) in auto mode
+
+travis_time:end:0e7a6720:start=1534667197532169002,finish=1534667197659981262,duration=127812260
+[0Ktravis_fold:end:install.1
+[0Ktravis_fold:start:install.2
+[0Ktravis_time:start:3ae146b1
+[0K$ sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-3.8 90
+update-alternatives: using /usr/bin/clang-3.8 to provide /usr/bin/clang (clang) in auto mode
+
+travis_time:end:3ae146b1:start=1534667197664884973,finish=1534667197684502526,duration=19617553
+[0Ktravis_fold:end:install.2
+[0Ktravis_fold:start:install.3
+[0Ktravis_time:start:173b9df8
+[0K$ sudo apt-get install -y libc++-dev libc++abi-dev
+
+Reading package lists... 0%
+
+Reading package lists... 100%
+
+Reading package lists... Done
+
+
+Building dependency tree... 0%
+
+Building dependency tree... 0%
+
+Building dependency tree... 50%
+
+Building dependency tree... 50%
+
+Building dependency tree       
+
+
+Reading state information... 0%
+
+Reading state information... 0%
+
+Reading state information... Done
+
+The following additional packages will be installed:
+  libc++-helpers libc++1 libc++abi1
+Suggested packages:
+  clang
+The following NEW packages will be installed:
+  libc++-dev libc++-helpers libc++1 libc++abi-dev libc++abi1
+0 upgraded, 5 newly installed, 0 to remove and 222 not upgraded.
+Need to get 996 kB of archives.
+After this operation, 7,819 kB of additional disk space will be used.
+
+0% [Working]
+            
+Get:1 http://mirror.jmu.edu/pub/ubuntu trusty/universe amd64 libc++1 amd64 1.0~svn199600-1 [239 kB]
+
+1% [1 libc++1 11.0 kB/239 kB 5%]
+                                
+23% [Working]
+             
+Get:2 http://mirror.jmu.edu/pub/ubuntu trusty/universe amd64 libc++abi1 amd64 1.0~svn199600-1 [94.8 kB]
+
+25% [2 libc++abi1 22.5 kB/94.8 kB 24%]
+                                      
+35% [Working]
+             
+Get:3 http://mirror.jmu.edu/pub/ubuntu trusty/universe amd64 libc++-helpers all 1.0~svn199600-1 [4,798 B]
+
+35% [3 libc++-helpers 4,798 B/4,798 B 100%]
+                                           
+39% [Working]
+             
+Get:4 http://mirror.jmu.edu/pub/ubuntu trusty/universe amd64 libc++-dev amd64 1.0~svn199600-1 [553 kB]
+
+41% [4 libc++-dev 27.9 kB/553 kB 5%]
+                                    
+88% [Working]
+             
+Get:5 http://mirror.jmu.edu/pub/ubuntu trusty/universe amd64 libc++abi-dev amd64 1.0~svn199600-1 [105 kB]
+
+88% [5 libc++abi-dev 11.0 kB/105 kB 10%]
+                                        
+100% [Working]
+              
+Fetched 996 kB in 0s (2,569 kB/s)
+Selecting previously unselected package libc++1:amd64.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 93988 files and directories currently installed.)
+Preparing to unpack .../libc++1_1.0~svn199600-1_amd64.deb ...
+Unpacking libc++1:amd64 (1.0~svn199600-1) ...
+Selecting previously unselected package libc++abi1:amd64.
+Preparing to unpack .../libc++abi1_1.0~svn199600-1_amd64.deb ...
+Unpacking libc++abi1:amd64 (1.0~svn199600-1) ...
+Selecting previously unselected package libc++-helpers.
+Preparing to unpack .../libc++-helpers_1.0~svn199600-1_all.deb ...
+Unpacking libc++-helpers (1.0~svn199600-1) ...
+Selecting previously unselected package libc++-dev:amd64.
+Preparing to unpack .../libc++-dev_1.0~svn199600-1_amd64.deb ...
+Unpacking libc++-dev:amd64 (1.0~svn199600-1) ...
+Selecting previously unselected package libc++abi-dev:amd64.
+Preparing to unpack .../libc++abi-dev_1.0~svn199600-1_amd64.deb ...
+Unpacking libc++abi-dev:amd64 (1.0~svn199600-1) ...
+Setting up libc++1:amd64 (1.0~svn199600-1) ...
+Setting up libc++abi1:amd64 (1.0~svn199600-1) ...
+Setting up libc++-helpers (1.0~svn199600-1) ...
+Setting up libc++-dev:amd64 (1.0~svn199600-1) ...
+Setting up libc++abi-dev:amd64 (1.0~svn199600-1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.13) ...
+
+travis_time:end:173b9df8:start=1534667197689030648,finish=1534667199743054909,duration=2054024261
+[0Ktravis_fold:end:install.3
+[0Ktravis_time:start:18e0edb2
+[0K$ qmake
+
+travis_time:end:18e0edb2:start=1534667199747710469,finish=1534667199822357663,duration=74647194
+[0K
+[32;1mThe command "qmake" exited with 0.[0m
+travis_time:start:005b6e00
+[0K$ make
+clang++ -c -m64 -pipe -Wall -Wextra -Weffc++ -Werror -std=c++14 -stdlib=libc++ -O2 -Wall -W -D_REENTRANT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED -I/usr/share/qt4/mkspecs/linux-g++-64 -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtGui -I/usr/include/qt4 -I. -o file-main.o file-main.cpp
+clang++ -m64 -stdlib=libc++ -Wl,-O1 -o travis-qmake-clang-c++14 file-main.o    -L/usr/lib/x86_64-linux-gnu -lQtGui -lQtCore -lpthread 
+
+travis_time:end:005b6e00:start=1534667199827269525,finish=1534667201206971552,duration=1379702027
+[0K
+[32;1mThe command "make" exited with 0.[0m
+travis_time:start:0ef53e58
+[0K$ ./travis-qmake-clang-c++14
+You are working in file-main.cpp
+
+travis_time:end:0ef53e58:start=1534667201211713671,finish=1534667201264319591,duration=52605920
+[0K
+[32;1mThe command "./travis-qmake-clang-c++14" exited with 0.[0m
+
+Done. Your build exited with 0.
